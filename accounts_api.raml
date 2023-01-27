@@ -13,7 +13,7 @@ types:
         type: integer
     queryParameters:
       Account_Type:
-        type: AccountType
+        type: string
         required: false
       Account_Name:
         type: Account
@@ -31,7 +31,7 @@ types:
           application/json:
             examples:
               message: Account not found
-                
+
   post:
     description: Create a new account
     headers:
