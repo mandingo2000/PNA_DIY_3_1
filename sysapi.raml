@@ -32,6 +32,12 @@ types:
         type: array
         items: Account
         examples:
-          input: !include 
+          input: !include /examples/AccountsPost.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              message: Account added
       
 
