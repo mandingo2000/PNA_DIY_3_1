@@ -1,10 +1,17 @@
 #%RAML 1.0
 title: SysAPI
 
-/secdetails:
-  get:
-    queryParameters:
-      required: true
-      enum:
-        examples:
-          !include /examples/Accounts.raml
+/accounts:
+  post:
+    description: Creates a new account
+    body:
+      application/json:
+        properties:
+          name: string
+          email: string
+          password: string
+    responses:
+      201:
+        description: Account created successfully
+      400:
+        description: Invalid request
