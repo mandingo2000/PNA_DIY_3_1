@@ -3,7 +3,7 @@ title: SysAPI
 
 types:
   AccountType: !include /datatypes/AccountType.raml
-  account: !include /datatypes/Account.raml
+  Account: !include /datatypes/Account.raml
 
 /accounts:
   get:
@@ -14,13 +14,13 @@ types:
         type: AccountType
         required: True
       Account_Name:
-        type: account
+        type: Account
         required: True
     responses:
       200:
         body:
           application/json:
-            items: account
+            items: Account
             examples:
               output: !include /examples/Accounts.raml
       
