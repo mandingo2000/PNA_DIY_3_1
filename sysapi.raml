@@ -29,6 +29,7 @@ types:
           application/json:
             examples:
               message: Account not found
+              
   post:
     description: Create a new account
     # headers:
@@ -39,7 +40,7 @@ types:
         items: Account
         examples:
           input: !include /examples/AccountsPost.raml
-          
+
     responses:
       201:
         body:
