@@ -24,6 +24,11 @@ types:
             items: Account
             examples:
               output: !include /examples/Accounts.raml
+      404:
+        body:
+          application/json:
+            examples:
+              message: Account not found
   post:
     description: Create a new account
     # headers:
