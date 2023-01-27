@@ -2,8 +2,8 @@
 title: SysAPI
 
 types:
-  AccountType: !include /datatypes/AccountType.raml
-  Account: !include /datatypes/Account.raml
+  accountType: !include /datatypes/AccountType.raml
+  account: !include /datatypes/Account.raml
 
 /accounts:
   get:
@@ -12,18 +12,18 @@ types:
       user-id:
         type: integer
     queryParameters:
-      Account_Type:
+      accountType:
         type: string
         required: false
-      Account_Name:
-        type: Account
+      account:
+        type: string
         required: false
 
     responses:
       200:
         body:
           application/json:
-            items: Account
+            items: account
             examples:
               output: !include /examples/Accounts.raml
       404:
