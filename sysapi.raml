@@ -8,8 +8,9 @@ types:
 /accounts:
   get:
     description: Retreive account info
-    # headers:
-    #   user-id:
+    headers:
+      user-id:
+        type: integer
     queryParameters:
       Account_Type:
         type: AccountType
@@ -32,8 +33,10 @@ types:
               
   post:
     description: Create a new account
-    # headers:
-    #   user-id:
+    headers:
+      user-id:
+        type:
+          
     body:
       application/json:
         type: array
